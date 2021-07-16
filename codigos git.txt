@@ -1,0 +1,93 @@
+codigos git (q para sair das telas chatas)
+
+	git init
+inicializa na pasta o uso do versionamento git
+
+	git add algo.c
+adiciona arquivo pro versionamento
+
+	git commit -m "primeiro commit"
+o commit registra a modificação, é o comentario referente a oq foi feito no código
+
+	git remote add origin https://github.com/everluiz/teste.git
+primeira vez: conectar ao repositório remoto
+
+	git push -u origin master
+envia pro repositório (-upstream)
+
+	git diff
+mostra a diferença entre a versão registrada com o arquivo modificado
+
+	git status
+mostra oq tem modificado
+
+para enviar modificações repitir linha 6 e 9 (com comentário da mod.)
+
+	git branch (nome)
+	git branch develop
+versão de desenvolvimento (não estável), outra versão do código, com modificações não testadas
+
+	git checkout (nome)
+	git checkout develop
+troca pro branch develop
+
+	git add teste.c
+	git commit -m "adicionando mod no desenvolvimento"
+	git push -u origin develop
+
+	cat teste.c
+mostra no terminal o codigo
+
+	git merge develop
+as modificações do branch develop foram pro principal, mas precisa fazer push
+	git push
+
+	git diff master:teste.c develop:teste.c
+printa as diferenças entre versões dos branch's
+
+	git tag -a (versão) -m (nome)
+	git tag -a v0.1 -m "minha versão 0.1"
+marcar um nome pra uma versão estável, para voltar caso problema
+
+	git tag
+	mostra as tag's
+
+	git push origin v0.1
+upa tag pro repositório
+
+	git checkout tags/v0.1
+trava o código na versão estável 0.1 do código
+	git checkout master
+volta pra versão de desenvolvimento principal
+
+	vim readme.txt
+cria arquivo e abre para digitar (ESC vai para command mode, :x salva e sai)
+	
+	git rm (arquivo)
+	git rm readme.txt
+remove arquivo do versionamento, push para mandar pro repositório github.
+
+	git clone https://github.com/everluiz/teste.git
+clona os arquivos de um projeto em outro
+
+	git submodule add https://github.com/everluiz/teste.git
+adiciona projeto externo, pode ser de outros devs.
+	git submodule init
+começa a monitorar isso
+	git commit -m "adicionado submodulo ..."
+	git push
+
+	git clone --recursive
+clone recursivo, faz download não só do projeto mas das bibliotecas que ele tem (submodule)
+
+	git pull
+baixa as ultimas modificações da biblioteca externa q foi adicionada (submodule)
+	git commit..
+	git push
+
+	git checkout -- teste.c
+remove a versão que estava com erro, volta na versão anterior
+
+	git reset --hard
+volta pra ultima versão q tá no branch
+
