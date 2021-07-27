@@ -89,5 +89,5 @@ baixa as ultimas modificações da biblioteca externa q foi adicionada (submodul
 remove a versão que estava com erro, volta na versão anterior
 
 	git reset --hard
-volta pra ultima versão q tá no branch
+volta pra ultima versão q tá no brangit ch
 
